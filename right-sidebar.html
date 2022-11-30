@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Machine Learning - Jiacheng Zhu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header Wrapper -->
+				<div id="header-wrapper">
+					<div class="container">
+
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+
+									<!-- Logo -->
+										<h1><a href="index.html" id="logo">Jiacheng Zhu</a></h1>
+
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a href="index.html">Home</a></li>
+												<li>
+													<a href="#">Projects</a>
+													<ul>
+														<li><a href="right-sidebar.html">Machine Learning</a></li>
+														<li><a href="left-sidebar.html">Programming</a></li>
+														<!--<li>
+															<a href="#">Phasellus consequat</a>
+															<ul>
+																<li><a href="#">Lorem ipsum dolor</a></li>
+																<li><a href="#">Phasellus consequat</a></li>
+																<li><a href="#">Magna phasellus</a></li>
+																<li><a href="#">Etiam dolore nisl</a></li>
+															</ul>
+														</li>
+														<li><a href="#">Veroeros feugiat</a></li>-->
+													</ul>
+												</li>
+												<!--<li><a href="left-sidebar.html">Programming Projects</a></li>
+												<li><a href="right-sidebar.html">Machine Learning Projects</a></li>-->
+												<li><a href="no-sidebar.html">Interest</a></li>
+											</ul>
+									</nav>
+
+								</div>
+							</header>
+
+					</div>
+				</div>
+
+			<!-- Main Wrapper -->
+				<div id="main-wrapper">
+					<div class="wrapper style2">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-8 col-12-medium">
+										<div id="content">
+
+											<!-- Content -->
+
+												<article>
+													<header class="major">
+														<h2>Political Affiliation Classification</h2>
+														<p>Aug-Dec 2022</p>
+													</header>
+
+													<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+
+													<p>This project is for my social data analytics’ undergraduate capstone. Most of my projects in the fall 2022 semester are in the fields of natural language processing/text analysis and this is one of them. This project combines both machine learning and statistical inference. The objective of this project is to (1) find a good classification model that can classify tweets into three categories (left, natural, right), (2) apply the same classification model to tweets from 2022 and tweets collected from 2010; then, assess whether the performance of the model in 2022 is any better than the model performance in 2010. The motivation behind this project is that we have experienced an increase in the level of polarization in the real world and the online world. Although the level of polarization is hard to quantify, I believe most people can agree with the statement that the US is more polarized today compared to 2010. Therefore, such a phenomenon motivated me to question whether will the model performance increase with time. My theory is that since the environment is more polarized, people are more likely to use “easy-to-identify” words with regard to their political affiliation; therefore, the performance of the same classification model should be better in 2022 compared to 2010. </p>
+													<p>The application of this project is not easy because it involves historical tweets. Since my Twitter developer account does not have access to historical tweets from 2010 through their official API. As a result, I have to do web-scrapping and it was good practice for me. The resulting dataset has around 10000 tweets for each year and I randomly subset both to 1000 tweets. The machine learning phase of this project is relatively easy because text analysis and political affiliation classification are well-research areas. I have to manually label each tweet because I am doing supervised learning. After that, I tried multiple classification models (SVM, random forest, naive Bayes, etc) on the document frequency matrix of the tweets. The chosen model is SVM (88% accuracy on 2010 data calculated by the mean of k=30 cross-validation, 92% on 2022).</p>
+													<!--<h3>Links:</h3>-->
+													<p>In order to compare model performance on 2022 data and 2010 data. I used k=30 cross-validation to build a sample distribution of accuracy for each year and then use permutation testing to test whether this two-sample distribution is from one population distribution (two samples one population test through permutation testing). As a result, the estimated p-value from permutation testing is not less than 0.05 and I cannot conclude that polarization made tweets significantly easier to be classified in terms of political affiliation.</p>
+
+													<!--<p>Type Here</p>-->
+												</article>
+
+												<article>
+												<header class="major">
+													<h2>NLP & Topic Modeling on User Review Dataset</h2>
+													<p>Sep 2022</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+
+												<p>This is one of my practice projects because I am learning text analysis this year. Topic modeling is one of the classical categories in the field of text analysis. In this project, I clustered customer reviews into groups and discovered the latent semantic structures using Python. The preprocessed review text by tokenization, stemming, stop words removal, and extracted features by Term-Frequency-Inverse Document Frequency (TFIDF). The trained unsupervised learning models are K-means clustering and Latent Dirichlet Analysis. I identified latent topics and keywords of each review for clustering and then visualized model training results by dimensionality reduction using principal component analysis. </p>
+												<!--<h3>Links:</h3>-->
+												<!--<p>Type Here</p>-->
+											</article>
+
+												<article>
+												<header class="major">
+													<h2>Customer Churn Prediction in Telecommunications Industry</h2>
+													<p>Aug 2022</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+
+												<p>This is a practice project I did in the summer. Customer Churn prediction is a very classic and popular practice project. In this project, the objective is to develop algorithms for telecommunications service vendors to predict customer churn probability based on labeled data via python. Preprocessing procedures are standard as data cleaning, categorical feature transformation, standardization, etc. The trained supervised machine learning models including Logistic Regression, random forest, and K-Nearest Neighbors, and applied regularization with the optimal parameter to overcome overfitting. The chosen model is a random forest. Its performance is F1 score = 0.9 via k-fold cross-validation technique and analyzed feature importance to identify top factors that influenced the results.</p><!--<h3>Links:</h3>-->
+												<!--<p>Type Here</p>-->
+											</article>
+
+												<article>
+												<header class="major">
+													<h2>Stock Portfolio Auto Allocation</h2>
+													<p>Jan-May 2022</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic11.jpg" alt="" /></span>
+
+												<p>This is a course project. The objective is to find a paper and reproduce its results and then add our own novelty to the paper’s method. The paper I choose used an ensembled reinforcement agent (A2C, PPO, DDPG) to auto-perform portfolio allocation and stock trading. I successfully reproduce its results and it was my first experience with reinforcement learning. The training environment of the agents is a modified OpenAI gym. I have noticed that the agent performs very poorly in early 2022 and my added novelty is trying to ensemble fewer agents and extend the training data all the way back to the 1970s. As the result, the performance of the ensembled agent demonstrates its ability to minimize loss during large drawdowns and return a higher-than-market average profit to investors during less volatile periods.</p>
+												<h3>Links:</h3>
+												<p>GitHub: <a href="https://github.com/jjz5463/DS340W_AutoStockTrading">https://github.com/jjz5463/DS340W_AutoStockTrading </a></p>
+											</article>
+
+												<article>
+												<header class="major">
+													<h2>Stock Prices and Market Index Prediction</h2>
+													<p>Mar 2022</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic12.jpg" alt="" /></span>
+
+												<p>This is a side project I did during the auto portfolio allocation project. Since LSTM is a very popular model for analyzing the volatility feature of stock prices and market indices, I tried it while I was working on the portfolio allocation project. LSTM is a deep learning time series model, and I trained it by changing activation and regularization functions via TensorFlow on GPU. Ideally, I can deploy the built LSTM model as a service to predict the variation of the S&P 500 index. However, the error of the LSTM I trained was relatively high (Root Mean Square Error=80). </p>
+											</article>
+
+												<article>
+												<header class="major">
+													<h2>Credit Fraud</h2>
+													<p>Nov 2021</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic13.jpg" alt="" /></span>
+
+													<p>This is a course project in form of a Kaggle competition. The project aims to identify fraudulent transactions from credit card data through binary classification. This is a very classic topic in machine learning. The major challenge in this project is that the dataset is highly imbalanced with only 0.2% of the training data labeled as fraud. I performed an oversampling technique, SMOTE, to balance the data. Multiple models were trained on the dataset (Logistic, XGBoost, SVM, etc.). The model chosen is a random forest model, which yields a 90% AUC score.</p>
+											</article>
+
+												<article>
+												<header class="major">
+													<h2>Subreddit Classification</h2>
+													<p>Oct 2021</p>
+												</header>
+
+												<span class="image featured"><img src="images/pic14.jpg" alt="" /></span>
+
+												<p>This is a course project for a statistical learning class, which is also a Kaggle competition. The objective of the project is to classify Reddit comments and posts into 10 subreddits. After the data was turned into a document frequency matrix, I performed dimension reduction through PCA and then trained the model using XGBoost. The challenging part of this project is that the model was trained on a small dataset with examples of comments posted in 10 different subreddits and then tested on a much larger data set of comments. The result yielded an 85% accuracy. </p>
+											</article>
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div id="sidebar">
+
+											<!-- Sidebar -->
+
+												<section>
+													<header class="major">
+														<h2>My Experience on Machine Learning</h2>
+													</header>
+													<p>
+														My experience with machine learning is roughly 2 years. I am familiar with most classical machine learning models as they are the main focus of undergraduate courses. For classical supervised learning, I have a solid foundation in Regression (linear, polynomial, regularizations) and classification(logistic, KNN, Naive Bayes, Decision Trees, SVM, boosting, bagging, etc). For unsupervised learning, I am familiar with dimension reduction techniques like t-SNE and PCA and clustering methods such as k-means. I have very limited experience with deep learning, and I have only been exposed to RNN (LSTM) and CNN. I am aware of the power of deep learning and willing to learn more both inside the classroom and by myself. I also very limited experience with reinforcement learning. The only experience I have with reinforcement learning is in a course project doing auto stock portfolio allocation. I have tested DDPG, A2C, and PPO with the auto portfolio allocation. I am always looking forward to learning more about those cutting-edge methods and models.
+													</p>
+													<p>Besides machine learning, I also had a solid foundation in statistical inference and modeling in terms of Generalized linear models, Linear multilevel models, etc. I am aware of the difference between machine learning and statistical modeling and expected to learn more about both fields in the future.</p>
+													<p>Most of my experience with machine learning is in the python environment (mostly jupyter notebook) and my experience with statistical modeling/inference is within R. R is my most familiar language because I use it every day. Python is my second most familiar language.  </p>
+												</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="col-6 col-12-medium imp-medium">
+							<!-- Contact -->
+							<section>
+								<h2>Get in touch</h2>
+								<div>
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<dl class="contact">
+													<dt>Email</dt>
+													<dd><a>jiachengz0402@outlook.com</a></dd>
+													<dt>Twitter</dt>
+													<dd><a href="https://twitter.com/JCG_ZHU">@JCG_ZHU</a></dd>
+													<dt>LinkedIn</dt>
+													<dd><a href="https://www.linkedin.com/in/jiacheng-zhu-86b660ab/">@Jiacheng Zhu</a></dd>
+													<dt>Github</dt>
+													<dd><a href="https://github.com/jjz5463">@jjz5463 </a></dd>
+													<dt>Kaggle</dt>
+													<dd><a href="https://www.kaggle.com/jjz5463">@jjz5463 </a></dd>
+												</dl>
+											</div>
+											<div class="col-6 col-12-small">
+												<dl class="contact">
+													<dt>Address</dt>
+													<dd>
+														State College, PA, USA
+													</dd>
+													<dt>Phone</dt>
+													<dd>(619) 548-8389</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+							</section>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
